@@ -1,0 +1,83 @@
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.header button{
+    border: none;
+}
+
+.header > div > span {
+    padding: 1vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    cursor: pointer;
+    min-width: 7vw;
+}
+
+.header >div> span:first-child:hover{
+    cursor: text !important;
+}
+
+.user-prefences > span:last-child:hover{
+    cursor: text !important;
+
+}
+
+.user-prefences > span:first-child:hover{
+    background-color: aliceblue !important;
+
+}
+
+.header > div > span:hover{
+    border-bottom: solid rgb(109, 180, 2) 1px;
+    transition: 0.8s;
+}
+
+.info-span{
+    margin-right: 19.6vw;
+}
+
+.user-prefences input{
+    width: 100%;
+    height: 2.5vh;
+    margin-right: 5vw;
+    border: none;
+    border-bottom: solid rgb(159, 159, 159) 1px;
+    border-radius: 0.5vh;
+}
+
+.user-prefences input:focus {
+    height: 3.2vh;
+    margin-top: -0.3vh !important;
+    transition: 0.5s;
+    font-size: 2.5vh;
+    width: 125%;
+    margin-left: -3vw;   
+}
+
+.user-prefences input:not(:focus) {
+    transition: 0.8s;
+}
+
+
+.header svg:hover {
+    color: rgb(47, 0, 255);
+    transition: 0.4s;
+}
+
+.header svg:not(:hover){
+    transition: 0.8s;
+}
+
+.bi-text-left{
+    margin-bottom: -0.5vh;
+}

@@ -1,0 +1,100 @@
+.layout {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.6);
+    /* background-color: rgb(255, 255, 255); */
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: 1% 98% 1%; */
+  }
+  
+  .layout>main {
+    min-height: 95vh;
+    grid-column: span 11;
+    padding-bottom: 10vh;
+    scroll-behavior: smooth;
+    margin-top: 5vh;
+    /* background-color: #343a4000; */
+  
+  }
+  
+  .layout>* {
+    border: 1px solid rgba(147, 143, 143, 0.1);
+  }
+  
+  .layout>header {
+    height: 5.5vh;
+    grid-column: span 12;
+    position: fixed;
+    margin-top: -0.5vh !important;
+  }
+  
+  .layout>footer {
+    grid-column: span 12;
+    height: 10vh;
+    background-color: rgb(245, 160, 0, 0.4) !important;
+  }
+  
+  .layout>aside {
+    grid-column: span 1;
+    box-shadow: rgba(125, 193, 252, 0.5) 0.2vh 0.2vh 0.2vh 0.2vh;
+  }
+  
+  #arrow-up{
+    border:none;
+    height: 4vh;
+    width: 5vw;
+    right: 85vw;
+    background-color: rgb(0, 0, 0, 0.0);
+    position: fixed;
+    bottom: 5vh;
+  }
+  
+  .layout > main > button > svg:hover{
+    color: blue;
+    transform: scale(1.2,1.2);
+    transition: 0.4s;
+  }
+  
+  .layout > main > button > svg:not(:hover){
+    transition: 0.8s;
+  }
+  
+  .layout > header {
+    transition: 0.5s;
+  }
+  
+  .layout > main > .user-prefences{
+    position: absolute;
+    width: 15vw;
+    height: 3vh;
+    top: 5.2vh;
+    right: 0.2vw;
+  }
+  
+  .layout aside {
+    transition: 1s !important;
+  
+  }
+  
+  .layout> * {
+    background-image:
+    linear-gradient(to right, #e9ecef6c, #cad0d55d)}
+  
+    .layout > app-filter-prefences{
+      background-color: #343a40a6;
+      color: #f5faff;
+      position: fixed;
+      width: 20vw;
+      right: 1vw;
+      border-radius: 0.5vh !important;
+      /* box-shadow: 0.2vh 0.2vh 1vh 0.3vh #93abc354; */
+      top: 11vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.5s;
+    }

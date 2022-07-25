@@ -1,0 +1,25 @@
+<div class="product-card" [ngClass]="stateService.newProductId == this.id ? 'new' : ''">
+    <div class="card-header">
+        <span>
+            Name
+        </span>
+        <span>
+            Qaunity
+        </span>
+    </div>
+
+    <div class="card-body">
+        <span>{{name}}</span>
+        <span>
+            <button (click)="onQuantityChange($event.target)">-</button>
+           <u> <b style="font-size:1rem; padding: 1.5vh;">{{quantity}}</b></u>
+            <button (click)="onQuantityChange($event.target)">+</button>
+        </span>
+    </div>
+
+    <div class="card-footer">
+        <span>
+             <button (click)="onDeleteItem()">Delete</button>
+        </span>
+    </div>
+</div>

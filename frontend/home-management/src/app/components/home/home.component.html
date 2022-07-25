@@ -1,0 +1,21 @@
+<div class="home">
+
+    <form>
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <input type="text" placeholder="Street">
+        <input type="text" placeholder="Aparment Number">
+        <input type="text" placeholder="Aparment Name">
+        <button>Let's Go</button>
+    </form>
+
+
+    <div class="actions" >
+        <span *ngFor="let component of stateService.publicComponents"> 
+            <h5>
+                {{component}}
+            </h5>
+         </span>
+    </div>
+
+</div>

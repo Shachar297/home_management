@@ -1,0 +1,14 @@
+<div class="form">
+
+    <button class="exitButton"(click)="stateService.isCreatingNewItem = false;">X</button>
+
+    <input type="text" placeholder="Item Name" [(ngModel)]="newProduct.name">
+    <input type="number" placeholder="Quantity" [(ngModel)]="newProduct.quantity">
+    <select  [(ngModel)]="newProduct.categoryId" >
+        <option *ngFor="let category of stateService.categories" 
+         value="{{category.id}}">{{category.name}}</option>
+    </select>
+
+
+    <button (click)="onCreateButtonClick()">Add</button>
+</div>

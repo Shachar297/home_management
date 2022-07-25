@@ -1,0 +1,18 @@
+<div class="products">
+
+    
+    <app-categories></app-categories>
+
+    <button class="addItem" (click)="stateService.isCreatingNewItem = !stateService.isCreatingNewItem; onAddItemBtn()"> + </button>
+    
+    <app-product-card *ngFor="let product of stateService.products"
+    [name]="product.name"
+    [id]="product.id"
+    [quantity]="product.quantity"
+    [categoryId]="product.categoryId"
+    (childEventRemoveItem)="removeItem($event)"
+    ></app-product-card>
+
+    <app-create-item *ngIf="stateService.isCreatingNewItem"></app-create-item>
+
+</div>

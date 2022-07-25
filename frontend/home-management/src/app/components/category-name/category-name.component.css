@@ -1,0 +1,10 @@
+.category {
+    box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh rgba(255, 255, 255, 0.287);
+    padding: 1.6vh;
+    width: 8vw !important;
+}
+
+.category:hover{
+    box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh rgba(255, 255, 255, 0.687);
+    transition: 0.5s;
+}

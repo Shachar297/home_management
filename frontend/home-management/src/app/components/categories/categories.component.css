@@ -1,0 +1,15 @@
+.categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: rgb(183, 182, 182);
+    height: 6vh;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.categories > *{
+    min-width: 8vw;
+    cursor: pointer;
+}
