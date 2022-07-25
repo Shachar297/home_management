@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+
+  mysql:
+    build: mysql
+    volumes: 
+      - "local-mysql:/var/local-mysql"
+    ports: 
+      - "3306:3306"
+      
+    networks:
+      - "home-management"
+
+    environment:
+      - "MYSQL_USER=shachar"
+      - "MYSQL_ROOT_PASSWORD=123456"
+
+  backend:
+    build: backend
+    ports: 
+      - "8844:8844"
+
+    environment:
+      - "PORT=8844"
+      - MYSQL_HOST=mysql
+      - "MYSQL_USER=root"
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "MYSQL_DATABASE_NAME=home"
+
+    networks:
+      - "home-management"
+
+  frontend:
+    build: frontend/home-management/
+    ports: 
+     - "4200:4200"
+
+    links:
+      - backend
+    networks:
+      - "home-management"
+
+volumes: 
+  local-mysql : {}
+
+networks:
+  home-management:
+    driver : bridge
