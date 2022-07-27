@@ -1,0 +1,37 @@
+{
+    "action": "coreui_Repository",
+    "method": "create",
+    "data": [
+        {
+            "attributes": {
+                "docker": {
+                    "httpPort": 8083,
+                    "forceBasicAuth": false,
+                    "v1Enabled": true
+                },
+                "storage": {
+                    "blobStoreName": "default",
+                    "strictContentTypeValidation": true,
+                    "writePolicy": "ALLOW",
+                    "latestPolicy": false
+                },
+                "component": {
+                    "proprietaryComponents": false
+                },
+                "cleanup": {
+                    "policyName": []
+                }
+            },
+            "name": "home-management-hub",
+            "format": "",
+            "type": "",
+            "url": "",
+            "online": true,
+            "dockercheckboxhttp": true,
+            "dockercheckboxhttps": false,
+            "recipe": "docker-hosted"
+        }
+    ],
+    "type": "rpc",
+    "tid": 51
+}

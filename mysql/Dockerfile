@@ -7,8 +7,4 @@ RUN apt update -y && \
 
 EXPOSE 3306
 
-
-ENV MYSQL_USER shachar
-ENV MYSQL_ROOT_PASSWORD 123456
-
 COPY . /var/local-mysql/

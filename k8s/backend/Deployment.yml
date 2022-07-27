@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: host.minikube.internal:8083/home_management_backend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8844
+          envFrom:
+            - configMapRef:
+                name: backend-config
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "256Mi"

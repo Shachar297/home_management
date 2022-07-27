@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    app: frontend
+  # Service of type nodeport
+  type: NodePort
+  # The deafult port for frontend
+  ports:
+    - port: 4200

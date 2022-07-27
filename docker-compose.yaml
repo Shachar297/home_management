@@ -2,8 +2,11 @@ version: '3'
 
 services:
 
+  
+
   mysql:
     build: mysql
+    image: ${DOCKER_HUB_URL}/home_management_mysql
     volumes: 
       - "local-mysql:/var/local-mysql"
     ports: 
@@ -18,6 +21,8 @@ services:
 
   backend:
     build: backend
+    image: ${DOCKER_HUB_URL}/home_management_backend
+    
     ports: 
       - "8844:8844"
 
@@ -33,6 +38,7 @@ services:
 
   frontend:
     build: frontend/home-management/
+    image: ${DOCKER_HUB_URL}/home_management_frontend
     ports: 
      - "4200:4200"
 

@@ -1,0 +1,15 @@
+{
+    "action": "coreui_RealmSettings",
+    "method": "update",
+    "data": [
+        {
+            "realms": [
+                "NexusAuthenticatingRealm",
+                "NexusAuthorizingRealm",
+                "DockerToken"
+            ]
+        }
+    ],
+    "type": "rpc",
+    "tid": 56
+}
